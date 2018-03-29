@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel index.html --open",
-    "build": "parcel build index.js --public-url",
-    "prettier": "prettier \"*/**/*.js\" --ignore-path ./.prettierignore --write && git status"
+    "build": "parcel build index.html --public-url ./",
+    "prettier": "prettier \"*/**/*.js\" --ignore-path ./.prettierignore --write && git status",
+    "deploy": "gh-pages -d dist"
   },
   "repository": "git+https://github.com/mnicole/prettier-config.git",
   "keywords": [
@@ -18,8 +19,9 @@
   "bugs": {
     "url": "https://github.com/mnicole/prettier-config/issues"
   },
-  "homepage": "https://github.com/mnicole/prettier-config#readme",
+  "homepage": "https://mnicole.github.io/prettier-config",
   "dependencies": {
+    "gh-pages": "^1.1.0",
     "hyperapp": "^1.0.2"
   },
   "devDependencies": {
