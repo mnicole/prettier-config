@@ -1,0 +1,31 @@
+{
+  "name": "prettier-config",
+  "version": "1.0.0",
+  "description": "Automatically generate a prettier config object",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.js --public-url",
+    "prettier": "prettier \"*/**/*.js\" --ignore-path ./.prettierignore --write && git status"
+  },
+  "repository": "git+https://github.com/mnicole/prettier-config.git",
+  "keywords": [
+    "prettier",
+    "config"
+  ],
+  "author": "Michele Larson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mnicole/prettier-config/issues"
+  },
+  "homepage": "https://github.com/mnicole/prettier-config#readme",
+  "dependencies": {
+    "hyperapp": "^1.0.2"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-hyperapp": "^2.3.0",
+    "parcel-bundler": "^1.5.0",
+    "prettier": "1.11.1"
+  }
+}
