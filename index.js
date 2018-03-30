@@ -61,7 +61,7 @@ const actions = {
 
 const Option = ({ name, key, description, type, options, state, clickFunc }) => (
     <div class="box">
-        <h2>{name}</h2>
+        <h3>{name}</h3>
         <div class="description">{description}</div>
         {
             type == 'buttons' ?
@@ -95,10 +95,12 @@ const Option = ({ name, key, description, type, options, state, clickFunc }) => 
 const Config = ({generatedConfig, resetConfig}) => (
     <div class="modal-overlay">
         <div class="modal">
-            <h1>Your prettier config:</h1>
+            <h2>Your prettier config:</h2>
             <textarea name="textarea" autofocus rows="10" cols="50">
                 {generatedConfig}
             </textarea>
+            <div class="description">Copy and paste this into your project's <code>.prettierrc</code> file. </div>
+            <div class="description">Tip: Run prettier on this file! <code>prettier .prettierrc --write</code></div>
             <div>
                 <button class="green" onclick={resetConfig}>Generate a new config</button>
             </div>
@@ -125,8 +127,8 @@ const view = (state, actions) => (
                     />
                 )
             })}
+            <button class="box green" onclick={actions.generateConfig}>Generate Config</button>
         </div>
-        <button class="green right" onclick={actions.generateConfig}>Generate Config</button>
     </div>
 );
 

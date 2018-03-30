@@ -1,42 +1,58 @@
 body {
     background-color: rgb(24, 32, 37);
-    color: #fff;
     font-family: 'Lato', sans-serif;
     margin: 20px;
     text-align: center;
+    color: #FFF;
+    font-weight: 400;
+}
+
+h1 {
+    color: #f8bc45;
+    margin-bottom: 10px;
 }
 
 h2 {
-    font-size: 16px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+h3 {
+    padding: 0;
+    margin: 10px;
+    font-size: 20px;
     font-weight: 700;
 }
 
 .description {
     font-size: 14px;
+    padding: 0 0 2px 0;
 }
 
 .container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: flex-start;
     align-content: stretch;
 }
 
 .box {
     width: 300px;
-    height: 150px;
+    height: 200px;
     padding: 10px;
     margin: 10px;
     border: 1px solid grey;
     border-radius: 3px;
     background-color: #c596c7;
+    color: rgb(24, 32, 37);
+    box-sizing: border-box;
 }
 
 .modal {
-    height: 50%;
-    width: 50%;
+    height: 350px;
+    width: 80%;
     margin: 0 auto;
     background-color: #FFF;
     color: #000;
@@ -47,6 +63,7 @@ h2 {
     z-index: 100;
     border-radius: 5px;
     padding: 10px;
+    min-height: 380px;
 }
 
 .modal-overlay {
@@ -59,26 +76,33 @@ h2 {
     height: 100%;
 }
 
+textarea {
+    margin-bottom: 10px;
+    max-width: 100%;
+}
+
+code {
+    font-family: courier;
+}
+
 input, button {
     border-radius: 3px;
     background-color: #fff;
-    padding: 10px 10px;
-    margin: 10px 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+button {
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 14px;
 }
 
 button.selected {
     background-color: #f8bc45;
 }
 
-button.right {
-    float: right;
-}
-
 button.green {
     background-color: #5ab3b3;
-    width: 320px;
-    margin: 10px;
-    padding: 15px;
-    font-weight: 700;
-    font-size: 16px;
+    font-size: 22px;
 }
